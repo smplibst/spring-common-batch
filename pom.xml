@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- バージョン -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- 親定義 -->
+  <parent>
+    <groupId>com.smplibst</groupId>
+    <artifactId>abstract-pom</artifactId>
+    <version>1.0.0</version>
+    <relativePath>../../abstract-pom</relativePath>
+  </parent>
+
+  <!-- プロジェクト定義 -->
+  <artifactId>spring-common-batch</artifactId>
+  <packaging>jar</packaging>
+  <version>1.1.0</version>
+  <name>Springのバッチ処理用ユーティリティ</name>
+  <description>Springを利用した各種Wrap処理を提供するライブラリ</description>
+
+  <!-- プロパティ -->
+  <properties>
+    <spring-boot.version>2.7.0</spring-boot.version>
+  </properties>
+
+  <!-- 依存ライブラリ -->
+  <dependencies>
+
+    <!-- commons-core -->
+    <dependency>
+      <groupId>com.smplibst</groupId>
+      <artifactId>commons-core</artifactId>
+      <version>[1,)</version>
+    </dependency>
+
+    <!-- SpringBoot -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>${spring-boot.version}</version>
+    </dependency>
+
+    <!-- spring-boot-configuration-processor -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <version>${spring-boot.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- tset-core -->
+    <dependency>
+      <groupId>com.smplibst</groupId>
+      <artifactId>test-core</artifactId>
+      <version>[1,)</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
